@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Este es un sitio de producto genial">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/miprogramacion.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/animation.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/mobile.css">
+        <title>Calculadora Zona Fresnel</title>
+        <script src="scripts/script.js"></script>
+        <script>
+            const dis = val => document.getElementById("result").value+=val
+
+            function solve()
+            {
+                let x = document.getElementById("distancia").value
+                let y = document.getElementById("frecuencia").value
+                let z = x/y
+                let r = 8.656 * Math.sqrt(z)
+                document.getElementById("resultado").value = r
+            }
+
+            function clr()
+            {
+            document.getElementById("distancia").value = ""
+            document.getElementById("frecuencia").value = ""
+            document.getElementById("resultado").value = ""
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <nav class="fadeInDown navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand col-md-2" href="#">
+                <img width="1300" height="50" src="images/freznel.png" alt="#">
+              </a>
+            </nav>
+        </div>
+
+        <div class="container products text-center mb-5">
+            <div class="product fadeInUp container-fluid">
+                <div>
+                    <img class="img-fluid" width="1300" src="images/antena.png" alt="#">
+                </div>
+                <br>
+                <div class="container-md card p-3 bg-secondary bg-opacity-50" style="width: 18rem;">
+                    <div>
+                        <td colspan="3"><input type="number" id="distancia"/></td>
+                        <p>Ingrese la Distancia en Km.</p> 
+                    </div>
+                    <div>
+                        <td colspan="3"><input type="number" id="frecuencia"/></td>
+                        <p>Ingrese la Frecuencia en GHz.</p> 
+                    </div>
+                    <br>
+                    <div>
+                        <td><input type="button" value="Calcular" onclick="solve()"/> </td>
+                    </div>
+                    <br>
+                    <div>
+                        <td colspan="3"><input type="number" id="resultado" disabled/></td>
+                        <p>Máximo radio en metros de la primera zona de Fresnel.</p> 
+                    </div>
+                    <br>
+                    <div>
+                        <td><input type="button" value="Limpiar" onclick="clr()"/> </td>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>        
+        <div class="mt-5">
+            <footer class="bg-dark text-center text-white">
+            <div class="container p-4 pb-0">
+                <section class="mb-4">
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-google"></i
+                    ></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-github"></i
+                    ></a>
+                </section>
+            </div>
+          </footer>
+        </div>
+    </body>
+</html>
