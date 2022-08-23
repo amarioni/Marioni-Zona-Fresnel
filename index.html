@@ -24,7 +24,7 @@
                 let x = document.getElementById("distancia").value
                 let y = document.getElementById("frecuencia").value
                 let z = x/y
-                let r = 8.656 * Math.sqrt(z)
+                let r = (Math.trunc((8.656 * Math.sqrt(z)) * 100)) / 100
                 document.getElementById("resultado").value = r
             }
 
